@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prépa D.E. — Démographie</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="app-header">
+  <h1>Prépa D.E. — Révision</h1>
+  <p>Santé publique L3 · Démographie</p>
+</header>
+
+<main class="container">
+<section class="card" id="orientation-card">
+ <h2>Comment travailler ?</h2>
+ <p>Cinq sujets complets de <strong>démographie</strong> pour préparer le Diplôme d’État.</p>
+ <div class="steps">
+   <div><b>1. QCM</b><span>Questions 1 à 30 : une ou plusieurs réponses peuvent être justes.</span></div>
+   <div><b>2. QCD</b><span>Questions 31 à 60 : choisissez Vrai ou Faux.</span></div>
+   <div><b>3. Correction</b><span>Réponses, explications et sources apparaissent uniquement à la fin.</span></div>
+ </div>
+ <p class="note"><strong>Conseil :</strong> faites les sujets dans l’ordre 1 à 5. Chaque sujet comporte 60 questions.</p>
+</section>
+
+<section class="card" id="subjects-card">
+ <h2>Choix du sujet</h2>
+ <label>Matière</label><input value="SANTÉ PUBLIQUE L3" disabled>
+ <label>Chapitre</label><input value="DÉMOGRAPHIE" disabled>
+ <label for="topic-choice">Sujet</label><select id="topic-choice"></select>
+ <div id="topic-help" class="topic-help"></div>
+ <button id="begin-btn">Commencer la révision</button>
+</section>
+
+<section class="card hidden" id="quiz-card">
+ <div class="quiz-head">
+  <div><b id="quiz-title"></b><div id="quiz-level" class="muted"></div></div>
+ </div>
+ <div id="case-text" class="case-text"></div>
+ <p class="consigne"><b>Consigne :</b> Répondez aux 60 questions. QCM = une ou plusieurs bonnes réponses. QCD = Vrai ou Faux. Barème : +1 bonne réponse, −1 mauvaise réponse, 0 sans réponse.</p>
+ <div id="questions"></div>
+ <button id="submit-btn">Terminer et voir la correction</button>
+</section>
+
+<section class="card hidden" id="result-card">
+ <h2>Résultat</h2>
+ <div id="score" class="score"></div>
+ <p id="score-message"></p>
+ <div id="review"></div>
+ <div class="buttons">
+  <button id="retry-btn">Refaire ce sujet</button>
+  <button id="subjects-btn" class="secondary">Choisir un autre sujet</button>
+ </div>
+</section>
+</main>
+<footer>Tirbuce Beda · Préparation D.E. 2026</footer>
+<script src="quiz-data.js"></script><script src="app.js"></script>
+</body></html>
